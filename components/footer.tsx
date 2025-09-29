@@ -29,8 +29,12 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://tunigold.tunevoo.com"
-                  className="text-sm text-slate-400 hover:text-olive-light transition-colors duration-200"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="text-sm text-slate-400 hover:text-olive-light transition-colors duration-200 cursor-pointer"
                 >
                   TuniGold
                 </a>
