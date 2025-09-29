@@ -37,7 +37,7 @@ export default function HomePage() {
                   title="TuniGold"
                   description="Premium Taste, Everyday Elegance"
                   ctaText="Explore TuniGold"
-                  href="https://tunigold.tunevoo.com"
+                  href="https://www.tunevoo.com"
                   premium={false}
                 />
               </div>

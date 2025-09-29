@@ -44,15 +44,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="/about"
-                  className="text-sm text-slate-400 hover:text-olive-light transition-colors duration-200"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/story"
+                  href="https://www.qalaaoliveoil.com/story"
                   className="text-sm text-slate-400 hover:text-olive-light transition-colors duration-200"
                 >
                   Our Story
