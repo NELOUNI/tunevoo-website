@@ -16,8 +16,12 @@ export function BrandCard({ brand, title, description, ctaText, href, premium }:
   const [isHovered, setIsHovered] = useState(false)
 
   const handleClick = () => {
-    // Navigate to the href URL
-    window.open(href, '_blank')
+    // If it's the same domain, scroll to top, otherwise open in new tab
+    if (href.includes('tunevoo.com')) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      window.open(href, '_blank')
+    }
   }
 
   return (
