@@ -21,7 +21,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://qalaa.tunevoo.com"
+                  href="https://www.qalaaoliveoil.com"
                   className="text-sm text-slate-400 hover:text-olive-light transition-colors duration-200"
                 >
                   Qalaa

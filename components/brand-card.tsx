@@ -16,9 +16,8 @@ export function BrandCard({ brand, title, description, ctaText, href, premium }:
   const [isHovered, setIsHovered] = useState(false)
 
   const handleClick = () => {
-    // For now, just log the click - replace with actual navigation
-    console.log(`Navigating to ${href}`)
-    // window.open(href, '_blank')
+    // Navigate to the href URL
+    window.open(href, '_blank')
   }
 
   return (

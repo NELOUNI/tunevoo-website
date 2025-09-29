@@ -1,10 +1,12 @@
 import { BrandCard } from "@/components/brand-card"
 import { TunevooLogo } from "@/components/tunevoo-logo"
 import { Footer } from "@/components/footer"
+import { DevelopmentBanner } from "@/components/development-banner"
 
 export default function HomePage() {
   return (
     <>
+      <DevelopmentBanner />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative flex min-h-screen flex-col items-center justify-center px-6 py-12">
@@ -23,7 +25,7 @@ export default function HomePage() {
                   title="Qalaa"
                   description="Exquisite Olive Oil for the Refined Palate"
                   ctaText="Explore Qalaa"
-                  href="https://qalaa.tunevoo.com"
+                  href="https://www.qalaaoliveoil.com"
                   premium={true}
                 />
               </div>
