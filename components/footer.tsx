@@ -38,7 +38,7 @@ export function Footer() {
                   }}
                   className="text-sm text-slate-400 hover:text-olive-light transition-colors duration-200 cursor-pointer"
                 >
-                  TuniGold
+                  Laya
                 </a>
               </li>
             </ul>

@@ -44,7 +44,7 @@ export default function TermsOfServicePage() {
               <section id="description">
                 <h2 className="text-2xl font-serif font-semibold text-foreground mb-4">2. Description of Service</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Tunevoo provides information about premium Tunisian olive oil brands, including Qalaa and TuniGold. Our website serves as a platform to showcase our products and connect customers with our brand offerings.
+                  Tunevoo provides information about premium Tunisian olive oil brands, including Qalaa and Laya. Our website serves as a platform to showcase our products and connect customers with our brand offerings.
                 </p>
               </section>
 

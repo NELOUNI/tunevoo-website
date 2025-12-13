@@ -21,15 +21,15 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Tunevoo | Premium Tunisian Olive Oil Brands",
   description:
-    "Discover Qalaa and TuniGold — two premium Tunisian olive oil brands under Tunevoo. Crafted for elegance, made for taste.",
-  keywords: "olive oil, premium, Tunisia, Qalaa, TuniGold, luxury, gourmet",
+    "Discover Qalaa and Laya — two premium Tunisian olive oil brands under Tunevoo. Crafted for elegance, made for taste.",
+  keywords: "olive oil, premium, Tunisia, Qalaa, Laya, luxury, gourmet",
   authors: [{ name: "Tunevoo" }],
   creator: "Tunevoo",
   publisher: "Tunevoo",
   openGraph: {
     title: "Tunevoo | Premium Tunisian Olive Oil Brands",
     description:
-      "Discover Qalaa and TuniGold — two premium Tunisian olive oil brands under Tunevoo. Crafted for elegance, made for taste.",
+      "Discover Qalaa and Laya — two premium Tunisian olive oil brands under Tunevoo. Crafted for elegance, made for taste.",
     type: "website",
     locale: "en_US",
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tunevoo | Premium Tunisian Olive Oil Brands",
     description:
-      "Discover Qalaa and TuniGold — two premium Tunisian olive oil brands under Tunevoo. Crafted for elegance, made for taste.",
+      "Discover Qalaa and Laya — two premium Tunisian olive oil brands under Tunevoo. Crafted for elegance, made for taste.",
   },
   robots: {
     index: true,
