@@ -4,7 +4,7 @@ import { useState } from "react"
 import { ArrowRight } from "lucide-react"
 
 interface BrandCardProps {
-  brand: "qalaa" | "tunigold"
+  brand: "qalaa" | "laya"
   title: string
   description: string
   ctaText: string
@@ -73,7 +73,7 @@ export function BrandCard({ brand, title, description, ctaText, href, premium }:
             ${premium ? "text-accent" : "text-primary"}
           `}
           >
-            {brand === "qalaa" ? "Q" : "TG"}
+            {brand === "qalaa" ? "Q" : "L"}
           </span>
         </div>
 

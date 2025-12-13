@@ -30,13 +30,13 @@ export default function HomePage() {
                 />
               </div>
 
-              {/* TuniGold Brand Card */}
+              {/* Laya Brand Card */}
               <div className="opacity-0 animate-fade-in-up animate-delay-400">
                 <BrandCard
-                  brand="tunigold"
-                  title="TuniGold"
+                  brand="laya"
+                  title="Laya"
                   description="Premium Taste, Everyday Elegance"
-                  ctaText="Explore TuniGold"
+                  ctaText="Explore Laya"
                   href="https://www.tunevoo.com"
                   premium={false}
                 />
