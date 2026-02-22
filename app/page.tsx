@@ -37,7 +37,7 @@ export default function HomePage() {
                   title="Laya"
                   description="Premium Taste, Everyday Elegance"
                   ctaText="Explore Laya"
-                  href="https://www.tunevoo.com"
+                  href="https://www.layaoliveoil.com"
                   premium={false}
                 />
               </div>

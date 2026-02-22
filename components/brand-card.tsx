@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 interface BrandCardProps {
   brand: "qalaa" | "laya"
@@ -16,12 +17,7 @@ export function BrandCard({ brand, title, description, ctaText, href, premium }:
   const [isHovered, setIsHovered] = useState(false)
 
   const handleClick = () => {
-    // If it's the same domain, scroll to top, otherwise open in new tab
-    if (href.includes('tunevoo.com')) {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    } else {
-      window.open(href, '_blank')
-    }
+    window.open(href, '_blank')
   }
 
   return (
@@ -56,44 +52,34 @@ export function BrandCard({ brand, title, description, ctaText, href, premium }:
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center space-y-6">
-        {/* Brand logo placeholder */}
-        <div
-          className={`
-          flex items-center justify-center w-16 h-16 rounded-xl border-2 transition-all duration-300
-          ${
-            premium
-              ? "bg-accent/10 border-accent/30 group-hover:border-accent/50"
-              : "bg-primary/10 border-primary/30 group-hover:border-primary/50"
-          }
-        `}
-        >
-          <span
-            className={`
-            text-xl font-serif font-bold transition-colors duration-300
-            ${premium ? "text-accent" : "text-primary"}
-          `}
-          >
-            {brand === "qalaa" ? "Q" : "L"}
-          </span>
+        {/* Brand logo */}
+        <div className="flex items-center justify-center w-48 h-32 transition-all duration-300">
+          <Image
+            src={brand === "qalaa" ? "/QALAA-logo.svg" : "/LAYA-logo.svg"}
+            alt={title}
+            width={192}
+            height={128}
+            className="object-contain w-full h-full"
+          />
         </div>
-
-        {/* Brand name */}
-        <h2 className="text-2xl md:text-3xl font-serif font-light text-foreground tracking-tight">{title}</h2>
 
         {/* Description */}
         <p className="text-muted-foreground font-light leading-relaxed text-balance max-w-xs">{description}</p>
 
         {/* CTA Button */}
         <div
-          className={`
-          inline-flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300
-          ${
-            premium
-              ? "border-accent/30 text-accent hover:bg-accent hover:text-accent-foreground"
-              : "border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
-          }
-          group-hover:shadow-lg
-        `}
+          className="inline-flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 group-hover:shadow-lg"
+          style={{
+            borderColor: isHovered
+              ? (premium ? "#c9a84c" : "#000000")
+              : (premium ? "rgba(var(--color-accent), 0.3)" : "rgba(var(--color-primary), 0.3)"),
+            backgroundColor: isHovered
+              ? (premium ? "#c9a84c" : "#000000")
+              : "transparent",
+            color: isHovered
+              ? (premium ? "#1a1008" : "#ffffff")
+              : (premium ? "var(--color-accent)" : "var(--color-primary)"),
+          }}
         >
           <span className="font-medium text-sm tracking-wide">{ctaText}</span>
           <ArrowRight
