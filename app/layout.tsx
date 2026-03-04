@@ -52,21 +52,45 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const GTM_ID = "GTM-M3PZG6GF"
+
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${GeistMono.variable}`}>
-      <body className="font-sans antialiased">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-5B3T6448C0"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-5B3T6448C0');
-          `}
+      <head>
+        <Script id="gtm-head" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
         </Script>
+      </head>
+      <body className="font-sans antialiased">
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         <Analytics />
       </body>
