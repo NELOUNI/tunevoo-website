@@ -52,7 +52,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const GTM_ID = "GTM-N425DZMR"
+  const GTM_ID = "GTM-M3PZG6GF"
 
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${GeistMono.variable}`}>
