@@ -52,12 +52,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const GTM_ID = "GTM-M3PZG6GF"
+  const GTM_ID = "GTM-N425DZMR"
 
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} ${GeistMono.variable}`}>
       <head>
-        <Script id="gtm-head" strategy="afterInteractive">
+        {/* Google Tag Manager - as high in head as possible */}
+        <Script id="gtm-head" strategy="beforeInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -66,6 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
       </head>
       <body className="font-sans antialiased">
+        {/* Google Tag Manager (noscript) - immediately after opening body */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
